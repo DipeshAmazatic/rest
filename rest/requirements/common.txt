@@ -1,0 +1,9 @@
+Django==3.2.8
+django_rest_knox==4.2.0
+djangorestframework==3.13.1
+knox==0.1.14
+six==1.14.0
+psycopg2==2.8.4
+django-filter==2.2.0
+psycopg2-binary==2.8.3
+djangorestframework-jwt==1.11.0
