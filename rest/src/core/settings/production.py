@@ -18,7 +18,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True #if (os.environ.get("DEBUG", "true").lower() == "true") else False
 
-ALLOWED_HOSTS = ['127.0.0.1','restdemoproject.herokuapp.com/']
+ALLOWED_HOSTS = ['restdemoproject.herokuapp.com/','127.0.0.1',
+                    'restdemoproject.herokuapp.com','http://restdemoproject.herokuapp.com/',
+                    'https://restdemoproject.herokuapp.com/',]
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
