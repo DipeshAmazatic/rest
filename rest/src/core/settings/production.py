@@ -26,7 +26,6 @@ ALLOWED_HOSTS = ["*"]
 DEFAULT_CONNECTION = dj_database_url.parse(os.environ.get('DATABASE_URL'))
 DEFAULT_CONNECTION.update({"CONN_MAX_AGE": 600})
 DATABASES = {"default": DEFAULT_CONNECTION}
-print('connected through database...')
 
 
 ## send email using smtp ##
