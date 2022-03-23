@@ -18,7 +18,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True #if (os.environ.get("DEBUG", "true").lower() == "true") else False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['restdemoproject.herokuapp.com']
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -37,5 +37,3 @@ EMAIL_USE_TLS = True if (os.environ.get("EMAIL_USE_TLS", "true").lower() == "tru
 EMAIL_PORT = os.environ.get('EMAIL_PORT')
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-
-
