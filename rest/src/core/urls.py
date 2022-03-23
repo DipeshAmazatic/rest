@@ -21,11 +21,9 @@ from django.contrib.auth import views as auth_views
 app_name = 'user'
 router = DefaultRouter()
 router.register('user', UserViewSet, basename='user')
-#router.register('api/email_verified/<uidb64>/<token>/', UserViewSet, basename='email_verified')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    #path('email-verified/<uidb64>/<token>/', email_verified, name='email_verified'),
     path('password_reset/done/', auth_views.PasswordResetDoneView.as_view(template_name='password_reset_done.html'), name='password_reset_done'),
     path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name="password_reset_confirm.html"), name='password_reset_confirm'),
     path('reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='password_reset_complete.html'), name='password_reset_complete'),

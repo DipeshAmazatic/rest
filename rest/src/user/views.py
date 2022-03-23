@@ -114,8 +114,7 @@ class UserViewSet(viewsets.ModelViewSet):
         token = AuthToken.objects.create(user)
         return Response({
             "users": UserSerializer(user, context=self.get_serializer_context()).data,
-            "Please check your email to confirm your account."
-            "token": token[1]
+            "":"Please check your email to confirm your account."
         })
     @action(methods=['POST','GET'], detail=False ,url_name='email_verified',url_path='email_verified')
     def email_verified(self, request):
