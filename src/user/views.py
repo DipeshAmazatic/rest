@@ -1,6 +1,3 @@
-from audioop import reverse
-from lib2to3.pgen2 import token
-from posixpath import basename
 from rest_framework import viewsets, permissions, status
 from rest_framework.response import Response
 from knox.models import AuthToken
@@ -18,7 +15,7 @@ from django.template.loader import render_to_string
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from .tokens import email_verified_token
 from django.utils.encoding import force_bytes, force_str
-from django.http import HttpResponse, request
+from django.http import HttpResponse
 from django.db.models.query_utils import Q
 from django.contrib.auth.tokens import default_token_generator
 User = get_user_model() 
