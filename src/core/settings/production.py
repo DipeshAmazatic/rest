@@ -6,6 +6,7 @@ Django local settings template for core project
 import os
 from pathlib import Path
 import dj_database_url
+import json
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -18,7 +19,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True #if (os.environ.get("DEBUG", "true").lower() == "true") else False
 
-ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS'),'localhost']
+ALLOWED_HOSTS = json.loads(os.environ.get('ALLOWED_HOSTS'))
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
